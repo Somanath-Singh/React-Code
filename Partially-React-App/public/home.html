@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-using react partialy in one page</title>
+
+    <!--CDN-->
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+
+    <!--follow the same order while add the js-->
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+    <!--babel is compile the react code so we place the text/babel default is text/javascript-->
+    <script type="text/babel">
+        //old way upto react 17
+        /*
+        ReactDOM.render(
+            "Welcome to react !!",
+            document.querySelector("p")
+        )
+            */
+
+        //new way upto react 18 
+        const root=ReactDOM.createRoot(document.querySelector("p"));
+        root.render("hello React .")
+
+    </script>
+
+</head>
+<body>
+    <h2>Home page using react</h2>
+    <p></p>
+    <a href="./index.html">back to index</a>
+</body>
+</html>
